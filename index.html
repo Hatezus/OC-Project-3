@@ -9,85 +9,94 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="stylesheet" href="styles/main.css">
+
+        <script src="https://kit.fontawesome.com/245f84bdbc.js" crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+
     
     </head>
 
     <body>
         <header>
-            <div>
-
+            <div id="header__logo">
+                <img src="/styles/utils/images/logos/logo.png" alt="logo du site">
             </div>
         </header>
- <!--------------------------------------------------[ Top section ]--------------------------------------------------->
-        <section>
-            <div>
-                <div></div>
-                <input type="text">
+ <!--------------------------------------------------[ Localisation ]--------------------------------------------------->
+        <section id="localisation">
+            
+            <div id="localisation__input-area">
+                <div id="input-area__location-dot"> <i class="fa-solid fa-location-dot"> </i> </div>
+                <input id="input-area__input-bar" type="search" placeholder="Paris, Bellville">
             </div>
 
-            <div>
-                <p> Réservez le menu qui vous convient </p>
-                <p> Découvrez des restaurants d'exception, séléectionnés par nos soins. </p>
-                <button> Explorer nos restaurants </button>
+            <div id="localisation__text-area">
+                <p id="text-area__main-text"> Réservez le menu qui vous convient </p>
+                <p id="text-area__sub-text"> Découvrez des restaurants d'exception, séléectionnés par nos soins. </p>
+                <button id="text-area__submit-button"> Explorer nos restaurants </button>
             </div>
+
         </section>
-<!--------------------------------------------------[ Fonctionnement ]---------------------------------------------------->
-        <section>
+<!--------------------------------------------------[ Explications ]---------------------------------------------------->
+        <section id="explications">
             <h2> Fonctionnement </h2>
 
-            <div> 
-                <div> image </div>
-                <p> Choisissez un restaurant </p>
-                <div> 1 </div>
+            <div class="explications__snippet"> 
+                <div class="explications__snippet--icon"> <i class="fa-solid fa-mobile-screen-button"></i> </div>
+                <p class="explcations__snippet--text"> Choisissez un restaurant </p>
+                <div class="explications__snippet--circle"> 1 </div>
             </div>
 
-            <div> 
-                <div> image </div>
-                <p> Composez votre menu </p>
-                <div> 2 </div>
+            <div class="explications__snippet"> 
+                <div class="explications__snippet--icon"> <i class="fa-solid fa-list"></i> </div>
+                <p class="explcations__snippet--text"> Composez votre menu </p>
+                <div class="explications__snippet--circle"> 2 </div>
             </div>
 
-            <div> 
-                <div> image </div>
-                <p> Degustez au restaurant </p>
-                <div> 3 </div>
+            <div class="explications__snippet"> 
+                <div class="explications__snippet--icon"> <i class="fa-solid fa-store"></i> </div>
+                <p class="explcations__snippet--text"> Degustez au restaurant </p>
+                <div class="explications__snippet--circle"> 3 </div>
             </div>
-
         </section>
 <!--------------------------------------------------[ Restaurants ]---------------------------------------------------->
-        <section>
+        <section id="restaurants">
             <h2> Restaurants </h2>
             
-            <div>
+            <div id="showcase">
             
-                <a href="#">
-                   <span> image </span> 
-                   <span> Nouveau </span>
-                   <span> La palette du goût </span>
-                   <span> Ménilmontant </span>
-                   <span> coeur </span>
+                <a href="#" class="showcase__display">
+                   <span class="display__image"> <img src="./styles/utils/images/restaurants/la_palette-du_gout.jpg" alt="image du restaurant"> </span> 
+                   <span class="display__new"> Nouveau </span>
+                   <span class="display__title"> La palette du goût </span>
+                   <span class="display__localisation"> Ménilmontant </span>
+                   <span class="display__heart"> <i class="fa-regular fa-heart"></i> </span>
                 </a>
 
-                <a href="#">
-                    <span> image </span> 
-                    <span> Nouveau </span>
-                    <span> La note enchantée </span>
-                    <span> Charonne </span>
-                    <span> coeur </span>
+                <a href="#" class="showcase__display">
+                    <span class="display__image"> <img src="./styles/utils/images/restaurants/la_note_enchantee.jpg" alt="image du restaurant"> </span> 
+                    <span class="display__new"> Nouveau </span>
+                    <span class="display__title"> La note enchantée </span>
+                    <span class="display__localisation"> Charonne </span>
+                    <span class="display__heart"> <i class="fa-regular fa-heart"></i> </span>
                  </a>
 
-                 <a href="#">
-                    <span> image </span> 
-                    <span> A la française </span>
-                    <span> Cité Rouge </span>
-                    <span> coeur </span>
+                 <a href="#" class="showcase__display">
+                    <span class="display__image"> <img src="/styles/utils/images/restaurants/a_la_francaise.jpg" alt="image du restaurant"> </span> 
+                    <span class="display__title"> A la française </span>
+                    <span class="display__localisation"> Cité Rouge </span>
+                    <span class="display__heart"> <i class="fa-regular fa-heart"></i> </span>
                  </a>
                 
-                 <a href="#">
-                    <span> image </span> 
-                    <span> Le délice des sens </span>
-                    <span> Folie-Méricourt </span>
-                    <span> coeur </span>
+                 <a href="#" class="showcase__display">
+                    <span class="display__image"> <img src="./styles/utils/images/restaurants/le_delice_des_sens.jpg" alt="image du restaurant"> </span> 
+                    <span class="display__title"> Le délice des sens </span>
+                    <span class="display__localisation"> Folie-Méricourt </span>
+                    <span class="display__heart"> <i class="fa-regular fa-heart"></i> </span>
                  </a> 
 
             </div>
@@ -95,14 +104,15 @@
 <!--------------------------------------------------[ Footer ]---------------------------------------------------->
         <footer>
 
-            <div> image </div>
+            <div id="footer__logo"> <img src="./styles/utils/images/logos/logo.png" alt="logo du site"> </div>
 
             <nav>
-                <li> <span> image </span> <a href="#"> Proposer un restaurant </a> </li>
-                <li> <span> image </span> <a href="#"> Devenir partenaire </a> </li>
+                <li> <span> <i class="fa-solid fa-utensils"></i> </span> <a href="#"> Proposer un restaurant </a> </li>
+                <li> <span> <i class="fa-solid fa-handshake-angle"></i> </span> <a href="#"> Devenir partenaire </a> </li>
                 <li> <a href="#"> Mentions légales </a> </li>
-                <li> <a href="#"> Contact </a> </li>
+                <li> <a href="mailto:supportteam@ohmyfood.com"> Contact </a> </li>
             </nav>
+            
         </footer>
     </body>
 </html>

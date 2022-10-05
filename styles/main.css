@@ -1,0 +1,276 @@
+/*--------------------------------------------------[Utils]--------------------------------------------------*/ /*--------------------------------------------------[ Colors ]--------------------------------------------------*/
+/*--------------------------------------------------[Vendors]--------------------------------------------------*/
+/*--------------------------------------------------[Base]--------------------------------------------------*/
+* {
+  max-width: 1920px;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*--------------------------------------------------[Components]--------------------------------------------------*/
+.showcase__display {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 17px;
+  box-shadow: 0px 10px 10px #E9E8E8;
+  margin-bottom: 19px;
+}
+
+.display__image {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 30px 30px 0px 0px;
+  align-items: center;
+  justify-content: center;
+  height: 175px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.display__new {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 30px;
+  width: 80px;
+  margin-top: 14px;
+  background-color: #99E2D0;
+  color: rgb(19, 146, 115);
+  right: 5%;
+}
+
+.display__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.display__title {
+  position: absolute;
+  bottom: 15%;
+  padding-left: 14px;
+  font-size: large;
+  color: black;
+}
+
+.display__localisation {
+  position: absolute;
+  bottom: 5%;
+  padding-left: 14px;
+  color: black;
+}
+
+.display__heart {
+  position: absolute;
+  right: 10%;
+  bottom: 12%;
+}
+
+#text-area__submit-button {
+  border: 1px solid black;
+  width: 100%;
+  height: 50px;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.explications__snippet {
+  height: 75px;
+  width: 100%;
+  border-radius: 24px 24px 24px 24px;
+  margin-bottom: 23px;
+  margin-left: 30px;
+  margin-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(246, 246, 246);
+  position: relative;
+}
+
+.explications__snippet--icon {
+  padding-right: 28px;
+  color: rgb(53, 53, 53);
+}
+
+.explications__snippet--circle {
+  background-color: #9356DC;
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -12px;
+}
+
+/*--------------------------------------------------[Layout]--------------------------------------------------*/
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  height: 65px;
+  width: 100%;
+}
+
+#header__logo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 35px;
+}
+
+#header__logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 230px;
+  width: 100%;
+  padding-left: 25px;
+  background-color: rgb(53, 53, 53);
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+footer nav li {
+  padding-bottom: 15px;
+}
+
+footer nav li i {
+  padding-right: 12px;
+}
+
+#footer__logo {
+  display: flex;
+  flex-wrap: wrap;
+  width: 120px;
+  height: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+#footer__logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  color: aliceblue;
+}
+
+/*--------------------------------------------------[Pages]--------------------------------------------------*/
+#restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 1225px;
+  width: 100%;
+  background-color: rgb(246, 246, 246);
+}
+
+*#showcase {
+  width: 100%;
+}
+
+#restaurants h2 {
+  height: 60px;
+  width: 100%;
+  padding-top: 60px;
+}
+
+#explications {
+  height: 440px;
+  width: 100%;
+}
+
+#localisation {
+  height: 355px;
+  width: 100%;
+}
+
+#localisation__input-area {
+  background-color: rgb(234, 234, 234);
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#input-area__location-dot {
+  padding-right: 14px;
+}
+
+#input-area__input-bar {
+  background-color: rgb(234, 234, 234);
+}
+
+#localisation__text-area {
+  background-color: rgb(246, 246, 246);
+  height: 305px;
+  width: 100%;
+}
+
+#text-area__main-text {
+  padding-top: 48px;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-weight: bold;
+  padding-left: 18%;
+  padding-right: 25%;
+  text-align: center;
+}
+
+#text-area__sub-text {
+  padding-top: 25px;
+  padding-left: 10%;
+  padding-right: 15%;
+  padding-bottom: 35px;
+  text-align: center;
+}
+
+#explications h2 {
+  padding-top: 50px;
+  padding-bottom: 23px;
+  padding-left: 21px;
+}
+
+#explications {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*--------------------------------------------------[Themes]--------------------------------------------------*//*# sourceMappingURL=main.css.map */
