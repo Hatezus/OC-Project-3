@@ -1,0 +1,115 @@
+#restaurants
+{   
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    height: 1225px;
+    width: 100%;
+
+    background-color: $light-grey;
+}
+
+*#showcase
+{
+    width: 100%;
+}
+
+#restaurants h2
+{
+    height: 60px;
+    width: 100%;
+    padding-top: 60px;
+}
+
+#explications
+{
+    height: 440px;
+    width: 100%;
+}
+
+#localisation
+{
+    height: 355px;
+    width: 100%;
+}
+
+#localisation__input-area
+{
+    background-color: $grey;
+
+    height: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#input-area__location-dot 
+{
+    padding-right: 14px;
+}
+
+#input-area__input-bar
+{
+    background-color: $grey;
+}
+
+
+
+#localisation__text-area
+{
+    background-color: $light-grey;
+    height: 305px;
+    width: 100%;
+
+
+}
+
+#text-area__main-text
+{
+    padding-top: 48px;
+   
+    width: 100%;
+    height: fit-content;
+
+    font-weight: bold;
+
+    padding-left: 18%;
+    padding-right: 25%;
+
+ 
+    text-align: center;
+
+    
+}
+
+#text-area__sub-text
+{
+    padding-top: 25px;
+
+    padding-left: 10%;
+    padding-right: 15%;
+
+    padding-bottom: 35px;
+
+    text-align: center;
+}
+
+#explications h2
+{
+    padding-top: 50px;
+    padding-bottom: 23px;
+    padding-left: 21px;
+}
+
+#explications
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
