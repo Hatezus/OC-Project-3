@@ -15,6 +15,14 @@ a {
   text-decoration: none;
 }
 
+body {
+  font-family: "Roboto";
+}
+
+h1 {
+  font-family: "Shrikhand";
+}
+
 /*--------------------------------------------------[Components]--------------------------------------------------*/
 .showcase__display {
   display: flex;
@@ -23,7 +31,7 @@ a {
   width: 100%;
   height: 250px;
   border-radius: 17px;
-  box-shadow: 0px 10px 10px #E9E8E8;
+  box-shadow: 0px 10px 20px #E9E8E8;
   margin-bottom: 19px;
 }
 
@@ -63,7 +71,7 @@ a {
   position: absolute;
   bottom: 15%;
   padding-left: 14px;
-  font-size: large;
+  font-weight: bold;
   color: black;
 }
 
@@ -74,21 +82,47 @@ a {
   color: black;
 }
 
-.display__heart {
+.display__heart--empty {
   position: absolute;
   right: 10%;
   bottom: 12%;
+  color: black;
+}
+
+.display__heart--full {
+  position: absolute;
+  right: 10%;
+  bottom: 12%;
+  opacity: 0;
+  color: #9356DC;
+  transition: opacity 1000ms;
+}
+.display__heart--full:hover {
+  opacity: 1;
 }
 
 #text-area__submit-button {
-  border: 1px solid black;
   background-color: #9356DC;
   color: white;
   border-radius: 30px;
-  width: 100%;
+  width: 58%;
   height: 50px;
-  margin-right: 10%;
-  margin-left: 10%;
+  margin: auto;
+  background: #FF79DA;
+  background: linear-gradient(173deg, #FF79DA 5%, #9356DC 90%);
+  box-shadow: 0px 10px 20px #E9E8E8;
+}
+
+#order__button {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 30px;
+  width: 50%;
+  height: 50px;
+  margin: auto;
+  background: #FF79DA;
+  background: linear-gradient(173deg, #FF79DA 5%, #9356DC 90%);
+  box-shadow: 0px 10px 20px #E9E8E8;
 }
 
 .explications__snippet {
@@ -105,11 +139,19 @@ a {
   align-items: center;
   background-color: rgb(246, 246, 246);
   position: relative;
+  box-shadow: 0px 5px 15px rgb(234, 234, 234);
+  transition: background-color 300ms;
+}
+.explications__snippet:hover {
+  background-color: rgb(245, 237, 255);
 }
 
 .explications__snippet--icon {
   padding-right: 28px;
-  color: rgb(53, 53, 53);
+}
+
+.explications__snippet--icon i {
+  color: rgb(126, 126, 126);
 }
 
 .explications__snippet--circle {
@@ -124,6 +166,52 @@ a {
   height: 24px;
   position: absolute;
   left: -12px;
+}
+
+.rectangle-display {
+  background-color: white;
+  height: 68px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 14px;
+  border-radius: 18px;
+  position: relative;
+}
+.rectangle-display:hover .ordering-pop-up {
+  transform: translate(-55px, 0);
+  opacity: 1;
+}
+.rectangle-display:hover .ordering-pop-up__checked {
+  transform: rotate(260deg);
+}
+
+.ordering-pop-up {
+  background-color: #99E2D0;
+  height: 68px;
+  width: 55px;
+  position: absolute;
+  top: 0%;
+  right: -55px;
+  opacity: 0;
+  border-radius: 0px 18px 18px 0px;
+  transition: transform 330ms ease-in-out;
+}
+.ordering-pop-up__dot {
+  position: absolute;
+  background-color: white;
+  height: 25px;
+  width: 25px;
+  top: calc(70% - 25px);
+  right: calc(70% - 25px);
+  border-radius: 50px;
+}
+.ordering-pop-up__checked {
+  position: absolute;
+  color: #99E2D0;
+  top: calc(62% - 16px);
+  right: calc(60% - 16px);
+  rotate: 90deg;
+  transition: transform 420ms ease-in-out;
 }
 
 /*--------------------------------------------------[Layout]--------------------------------------------------*/
@@ -180,6 +268,7 @@ footer nav li i {
   height: 20px;
   margin-bottom: 30px;
   margin-top: 30px;
+  color: white;
 }
 
 #footer__logo img {
@@ -187,10 +276,11 @@ footer nav li i {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  color: aliceblue;
+  color: white;
 }
 
 /*--------------------------------------------------[Pages]--------------------------------------------------*/
+/*--------------------------------------------------[ Index HTML ]--------------------------------------------------*/
 #restaurants {
   display: flex;
   flex-wrap: wrap;
@@ -242,6 +332,7 @@ footer nav li i {
   background-color: rgb(246, 246, 246);
   height: 305px;
   width: 100%;
+  margin: auto;
 }
 
 #text-area__main-text {
@@ -254,6 +345,8 @@ footer nav li i {
   padding-left: 18%;
   padding-right: 25%;
   text-align: center;
+  font-weight: 700;
+  font-size: 700;
 }
 
 #text-area__sub-text {
@@ -274,6 +367,112 @@ footer nav li i {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+
+/*--------------------------------------------------[ A la francaise HTML]--------------------------------------------------*/
+#top-section {
+  position: relative;
+}
+
+#top-section__image {
+  height: 308px;
+  width: 100%;
+  z-index: 0;
+}
+
+#top-section__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+
+#top-section__text-area {
+  z-index: 3;
+  position: absolute;
+  border-radius: 40px 40px 0px 0px;
+  width: 100%;
+  height: 86px;
+  background-color: rgb(246, 246, 246);
+  bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#top-section__text-area--title {
+  padding-right: 86px;
+}
+
+#menu {
+  background-color: rgb(246, 246, 246);
+  height: 1110px;
+}
+
+#dessert__title {
+  position: relative;
+  padding-top: 35px;
+  padding-bottom: 26px;
+  padding-left: 21px;
+  text-overflow: ellipsis;
+}
+
+#plat__title {
+  padding-top: 35px;
+  padding-bottom: 26px;
+  padding-left: 21px;
+  position: relative;
+  text-overflow: ellipsis;
+}
+
+#entree__title {
+  position: relative;
+  padding-top: 18px;
+  padding-bottom: 26px;
+  padding-left: 21px;
+  text-overflow: ellipsis;
+}
+
+.underline {
+  position: absolute;
+  border: 2px solid #99E2D0;
+  width: 40px;
+  top: 75%;
+}
+
+.rectangle-display h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.rectangle-display p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 0px;
+  padding-left: 10px;
+}
+
+.display__price {
+  position: absolute;
+  right: 22px;
+  bottom: 15px;
+}
+
+.rectangle-display {
+  box-shadow: 0px 5px 15px rgb(234, 234, 234);
+}
+
+#display__button {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
 }
 
 /*--------------------------------------------------[Themes]--------------------------------------------------*//*# sourceMappingURL=main.css.map */

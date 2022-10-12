@@ -13,14 +13,16 @@
 
         <script src="https://kit.fontawesome.com/245f84bdbc.js" crossorigin="anonymous"></script>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap" rel="stylesheet">
 
     
     </head>
 
     <body>
+
+        <div id="main__wrapper">
 <!--------------------------------------------------[ Header ]---------------------------------------------------->
         <header>
             <div id="header__logo">
@@ -75,7 +77,8 @@
                    <span class="display__new"> Nouveau </span>
                    <span class="display__title"> La palette du goût </span>
                    <span class="display__localisation"> Ménilmontant </span>
-                   <span class="display__heart"> <i class="fa-regular fa-heart"></i> </span>
+                   <span class="display__heart--empty"> <i class="fa-regular fa-heart"></i> </span>
+                   <span class="display__heart--full"> <i class="fa-solid fa-heart"></i> </span>
                 </a>
 
                 <a href="#" class="showcase__display">
@@ -83,21 +86,25 @@
                     <span class="display__new"> Nouveau </span>
                     <span class="display__title"> La note enchantée </span>
                     <span class="display__localisation"> Charonne </span>
-                    <span class="display__heart"> <i class="fa-regular fa-heart"></i> </span>
+                    <span class="display__heart--empty"> <i class="fa-regular fa-heart"></i> </span>
+                    <span class="display__heart--full"> <i class="fa-solid fa-heart"></i> </span>
+                    
                  </a>
 
                  <a href="./html/a_la_francaise.html" class="showcase__display">
                     <span class="display__image"> <img src="/styles/utils/images/restaurants/a_la_francaise.jpg" alt="image du restaurant"> </span> 
                     <span class="display__title"> A la française </span>
                     <span class="display__localisation"> Cité Rouge </span>
-                    <span class="display__heart"> <i class="fa-regular fa-heart"></i> </span>
+                    <span class="display__heart--empty"> <i class="fa-regular fa-heart"></i> </span>
+                    <span class="display__heart--full"> <i class="fa-solid fa-heart"></i> </span>
                  </a>
                 
                  <a href="#" class="showcase__display">
                     <span class="display__image"> <img src="./styles/utils/images/restaurants/le_delice_des_sens.jpg" alt="image du restaurant"> </span> 
                     <span class="display__title"> Le délice des sens </span>
                     <span class="display__localisation"> Folie-Méricourt </span>
-                    <span class="display__heart"> <i class="fa-regular fa-heart"></i> </span>
+                    <span class="display__heart--empty"> <i class="fa-regular fa-heart"></i> </span>
+                    <span class="display__heart--full"> <i class="fa-solid fa-heart"></i> </span>
                  </a> 
 
             </div>
@@ -105,7 +112,7 @@
 <!--------------------------------------------------[ Footer ]---------------------------------------------------->
         <footer>
 
-            <div id="footer__logo"> <img src="./styles/utils/images/logos/logo.png" alt="logo du site"> </div>
+            <div id="footer__logo"> <img src="/styles/utils/images/logos/logo.png" alt="logo du site"> </div>
 
             <nav>
                 <li> <span> <i class="fa-solid fa-utensils"></i> </span> <a href="#"> Proposer un restaurant </a> </li>
@@ -115,5 +122,6 @@
             </nav>
             
         </footer>
+        </div>
     </body>
 </html>

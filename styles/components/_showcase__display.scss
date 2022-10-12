@@ -10,7 +10,7 @@
 
     border-radius: 17px;
 
-    box-shadow: 0px 10px 10px #E9E8E8;
+    box-shadow: 0px 10px 20px #E9E8E8;
 
     margin-bottom: 19px;
 }
@@ -72,9 +72,8 @@
     position: absolute;
     bottom: 15%;
     padding-left: 14px;
-    font-size: large;
-    color: black
-
+    font-weight: bold;
+    color: black;
 }
 
 .display__localisation
@@ -85,9 +84,24 @@
     color: black
 }
 
-.display__heart
+.display__heart--empty
 {
     position: absolute;
     right: 10%;
     bottom: 12%;
+    color: black;
 }
+ .display__heart--full
+ {
+    position: absolute;
+    right: 10%;
+    bottom: 12%;
+    opacity: 0;
+    color: $purple;
+    transition: opacity 1000ms;
+
+    &:hover
+    {
+        opacity: 1;
+    }
+ }

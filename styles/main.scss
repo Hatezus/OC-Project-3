@@ -4,13 +4,17 @@
 
 /*--------------------------------------------------[Base]--------------------------------------------------*/
 @import "./base/reset";
+@import "./base/fonts";
 /*--------------------------------------------------[Components]--------------------------------------------------*/
 @import "./components/showcase__display";
 @import "./components/submit-button";
 @import "./components/explanation-snippet";
+@import "./components/rectangle-display";
+@import "./components/spiner";
 /*--------------------------------------------------[Layout]--------------------------------------------------*/
 @import "./layout/header";
 @import "./layout/footer";
 /*--------------------------------------------------[Pages]--------------------------------------------------*/
 @import "./pages/index";
+@import "./pages/_a_la_francaise";
 /*--------------------------------------------------[Themes]--------------------------------------------------*/
