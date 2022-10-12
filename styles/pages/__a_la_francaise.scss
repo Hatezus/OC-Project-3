@@ -1,0 +1,124 @@
+/*--------------------------------------------------[ A la francaise HTML]--------------------------------------------------*/
+#top-section
+{
+    position: relative;
+}
+
+#top-section__image
+{
+    height: 308px;
+    width: 100%;
+
+    z-index: 0;
+}
+
+#top-section__image img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+#top-section__text-area
+{
+    
+    z-index: 3;
+    position: absolute;
+    border-radius: 40px 40px 0px 0px;
+    width: 100%;
+    height: 86px;
+    background-color: $light-grey;
+    bottom: 0px;
+
+    
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#top-section__text-area--title
+{
+    padding-right: 86px;
+}
+
+#menu
+{
+    background-color: $light-grey;
+    height: 1110px;
+}
+
+#dessert__title
+{position: relative;
+    padding-top: 35px;
+    padding-bottom: 26px;
+    padding-left: 21px;
+    text-overflow: ellipsis;
+}
+
+#plat__title
+{
+    padding-top: 35px;
+    padding-bottom: 26px;
+    padding-left: 21px;
+    position: relative;
+    text-overflow: ellipsis;
+}
+
+#entree__title
+{
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 26px;
+    padding-left: 21px;
+    text-overflow: ellipsis;
+}
+
+.underline
+{
+    position: absolute;
+    border: 2px solid $mint;
+    width: 40px;
+
+    top: 75%;  
+}
+
+.rectangle-display h3
+{
+    width: fit-content;
+
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.rectangle-display p
+{
+    width: fit-content;
+    margin-right: 0px;
+    padding-left: 10px;
+}
+
+.display__price
+{
+    position: absolute;
+    right: 22px;
+    bottom: 15px;
+    
+}
+
+.rectangle-display
+{
+    box-shadow: 0px 5px 15px $grey;
+}
+
+#display__button
+{
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+}

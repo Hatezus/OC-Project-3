@@ -1,0 +1,57 @@
+.loader {
+  width: $loader-dimension;
+  height: $loader-dimension;
+  
+  margin: auto;
+  margin-top: 30%;
+
+  .loader__spiner 
+  {
+    position: relative;
+    top: 10%;
+    left: 0;
+    z-index: -1;
+    width: 60%;
+    height: 45%;
+    border: 10px solid transparent;
+    border-bottom: 10px solid $mint;
+    border-radius: 50%;
+    animation: loader $loader-timing infinite;
+    animation-timing-function: linear;
+  }
+  .loader__pan 
+  {
+    display:flex;
+    width: 100%;
+    animation: pan $loader-timing infinite;
+  }
+
+  .pan__body
+  {
+    width: 60%;
+    height: 20px;
+    background: linear-gradient($pink, $purple);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .pan__handle
+  {
+    width: 40%;
+    height: 10px;
+    background: linear-gradient($pink, $purple);
+    border-radius: 10px;
+  }
+  
+  .loadeur__shadow 
+  {
+    position: relative;
+    top: 15%;
+    left: 15%;
+    width: 30%;
+    height: 8px;
+    background: $grey;
+    border-radius: 20px;
+    animation: shadow $loader-timing infinite;
+  }
+}

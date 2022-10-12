@@ -1,5 +1,6 @@
 /*--------------------------------------------------[Utils]--------------------------------------------------*/
 @import "./utils/variables";
+@import "./utils/keyframes";
 /*--------------------------------------------------[Vendors]--------------------------------------------------*/
 
 /*--------------------------------------------------[Base]--------------------------------------------------*/
@@ -10,7 +11,7 @@
 @import "./components/submit-button";
 @import "./components/explanation-snippet";
 @import "./components/rectangle-display";
-@import "./components/spiner";
+@import "./components/loader";
 /*--------------------------------------------------[Layout]--------------------------------------------------*/
 @import "./layout/header";
 @import "./layout/footer";
