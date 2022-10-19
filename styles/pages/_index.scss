@@ -72,12 +72,35 @@
     background-color: $light-grey;
     height: 305px;
     width: 100%;
-
-  
-
     margin: auto;
-
 }
+
+@media screen and ( min-width: 451px)
+{
+    #localisation
+    {
+        height: 330px;
+    }
+
+    #localisation__text-area
+    {
+        height: 280px;
+    }
+}
+
+@media screen and (min-width: 645px) 
+{
+    #localisation__text-area
+    {
+        height: 250px;
+    }  
+    
+    #localisation
+    {
+        height: 300px;
+    }
+}
+
 
 #text-area__main-text
 {
@@ -85,8 +108,6 @@
    
     width: 100%;
     height: fit-content;
-
-    font-weight: bold;
 
     padding-left: 18%;
     padding-right: 25%;
