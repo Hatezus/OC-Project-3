@@ -13,7 +13,37 @@
 
     position: relative;
 
+    box-shadow: 0px 5px 15px $grey;
 
+    & h3
+    {
+        width: fit-content;
+
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 5px;
+    }
+
+    & .display__infos
+    {
+        width: fit-content;
+        margin-right: 0px;
+        padding-left: 10px;
+    }
+
+    & .display__price
+    {
+        font-weight: 700;
+        position: absolute;
+        right: 22px;
+        bottom: 12px;
+        transition: transform 420ms ease-in-out;
+    }
+    
+    &:hover .display__price
+    {
+        transform: translate(-55px, 0);
+    }
 
     &:hover .ordering-pop-up
     {
@@ -27,9 +57,22 @@
         transform: rotate(260deg);
     }
 
-
+    &:hover h3
+    {
+        width: calc(100% - 120px);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    &:hover .display__infos
+    {
+        width: calc(100% - 120px);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        
+    }
 }
-
 
  .ordering-pop-up
  {
@@ -41,10 +84,6 @@
     right: -55px;
 
     opacity: 0;
-
-    
-
-    
 
     border-radius: 0px 18px 18px 0px;
     

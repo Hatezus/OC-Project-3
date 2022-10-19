@@ -1,4 +1,5 @@
-@keyframes loader {
+@keyframes loader 
+  {
     0% {
       width: 10%;
       transform: rotate(0deg);
@@ -34,7 +35,8 @@
     }
   }
   
-  @keyframes pan {
+@keyframes pan 
+  {
     0% {
       transform: rotate(0deg);
       transform-origin: top right;
@@ -51,7 +53,8 @@
     }
   }
   
-  @keyframes shadow {
+@keyframes shadow 
+  {
     0% {
       width: 30%;
     }
@@ -61,5 +64,30 @@
     }
     100% {
       width: 30%;
+    }
+  }
+
+@keyframes loading-spiner
+  {
+    0% {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    100% {
+      width: 0vw;
+      height: 0vh;
+      opacity: 0%;
+    }
+  }
+
+@keyframes loading-menu
+  {
+    0% {
+      transform: translateY(-20px);
+    }
+
+    100% {
+      opacity: 1;
     }
   }

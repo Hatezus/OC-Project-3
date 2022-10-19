@@ -1,14 +1,21 @@
-.loader {
+#load-animation
+{
+  animation: loading-spiner 3s steps(1, jump-end) forwards;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.loader
+{
   width: $loader-dimension;
   height: $loader-dimension;
-  
-  margin: auto;
-  margin-top: 30%;
-
+ 
   .loader__spiner 
   {
     position: relative;
     top: 10%;
+  
     left: 0;
     z-index: -1;
     width: 60%;
@@ -43,7 +50,7 @@
     border-radius: 10px;
   }
   
-  .loadeur__shadow 
+  .loader__shadow 
   {
     position: relative;
     top: 15%;

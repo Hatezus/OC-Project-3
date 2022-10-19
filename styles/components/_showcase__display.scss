@@ -81,23 +81,47 @@
     position: absolute;
     bottom: 5%;
     padding-left: 14px;
-    color: black
+    color: black;
+
+
+    
 }
 
 .display__heart--empty
 {
     position: absolute;
     right: 10%;
-    bottom: 12%;
+    bottom: 10%;
     color: black;
+    opacity: 1;
+
+       
+    
 }
+
+.fa-heart
+{
+    font-size: x-large;
+    font-weight: 300;
+}
+
+
+
  .display__heart--full
  {
     position: absolute;
     right: 10%;
-    bottom: 12%;
+    bottom: 10%;
     opacity: 0;
-    color: $purple;
+
+   
+
+    background-color: black;
+
+    background-clip: text;
+
+
+    
     transition: opacity 1000ms;
 
     &:hover

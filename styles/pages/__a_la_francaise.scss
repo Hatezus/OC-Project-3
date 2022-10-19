@@ -44,20 +44,21 @@
 #top-section__text-area--title
 {
     padding-right: 86px;
+    font-size: xx-large;
 }
 
 #menu
 {
     background-color: $light-grey;
-    height: 1110px;
+    height: 1140px;
 }
 
 #dessert__title
-{position: relative;
+{   position: relative;
     padding-top: 35px;
     padding-bottom: 26px;
     padding-left: 21px;
-    text-overflow: ellipsis;
+    font-weight: lighter;
 }
 
 #plat__title
@@ -66,7 +67,7 @@
     padding-bottom: 26px;
     padding-left: 21px;
     position: relative;
-    text-overflow: ellipsis;
+    font-weight: lighter;
 }
 
 #entree__title
@@ -75,7 +76,7 @@
     padding-top: 18px;
     padding-bottom: 26px;
     padding-left: 21px;
-    text-overflow: ellipsis;
+    font-weight: lighter;
 }
 
 .underline
@@ -87,38 +88,29 @@
     top: 75%;  
 }
 
-.rectangle-display h3
-{
-    width: fit-content;
 
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 5px;
-}
-
-.rectangle-display p
-{
-    width: fit-content;
-    margin-right: 0px;
-    padding-left: 10px;
-}
-
-.display__price
-{
-    position: absolute;
-    right: 22px;
-    bottom: 15px;
-    
-}
-
-.rectangle-display
-{
-    box-shadow: 0px 5px 15px $grey;
-}
 
 #display__button
 {
     display: flex;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 30px;
+}
+
+.entree__display
+{
+    opacity: 0;
+    animation: loading-menu 3s 1 forwards;
+}
+
+.plat__display
+{
+    opacity: 0;
+    animation: loading-menu 3s 1s 1 forwards;
+}
+
+.dessert__display
+{
+    opacity: 0;
+    animation: loading-menu 3s 2s 1 forwards;
 }

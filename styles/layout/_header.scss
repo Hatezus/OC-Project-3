@@ -8,8 +8,23 @@ header
 
     height: 65px;
     width: 100%;
+
+    position: relative;
 }
 
+#header__return-arrow
+{
+    position: absolute;
+
+    left: 20px;
+    top: 20px;
+}
+
+.fa-arrow-left
+{
+    font-size: x-large;
+    color: black;
+}
 
 
 #header__logo
