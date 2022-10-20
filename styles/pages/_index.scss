@@ -18,7 +18,7 @@
     z-index: 1;
 }
 
-*#showcase
+#showcase-smarthpone
 {
     width: 100%;
 }
@@ -27,7 +27,7 @@
 {
     height: 60px;
     width: 100%;
-    padding-top: 60px;
+    margin-top: 60px;
 }
 
 #explications
@@ -40,7 +40,14 @@
 {
     height: 355px;
     width: 100%;
+
+    & h2
+    {
+        opacity: 0;
+    }
 }
+
+
 
 #localisation__input-area
 {
@@ -146,3 +153,97 @@
     flex-wrap: wrap;
 }
 
+
+
+@media screen and (min-width: 1024px)
+{
+    #main__wrapper 
+    {
+        display : flex;
+        flex-wrap: wrap;
+    }
+
+    header
+    {
+        order: 1;
+    }
+    #localisation
+    {
+        order: 3;
+        width: 50%;
+        height: 440px;
+
+        & h2
+        {
+            opacity: 1;
+            padding-top: 50px;
+            padding-bottom: 45px;
+            padding-left: 50px;
+        }
+
+        &__text-area
+        {
+            background-color: white;
+        }
+
+        &__input-area
+        {
+            width: 80%;
+            margin: auto;
+            border-radius: 24px;
+            height: 70px;
+
+            #input-area__input-bar
+            {
+                font-weight: 700;
+                font-size: x-large;
+            }
+
+            #input-area__location-dot
+            {
+                font-size: x-large;
+                padding-right: 50px;
+            }
+        }
+    }
+    #explications
+    {
+        order: 2;
+        width: 50%;
+    }
+    #restaurants
+    {
+        order: 4;
+    }
+    footer
+    {
+        display: flex;
+        flex-direction: row;
+        order: 5;
+        height: 90px;
+
+        & nav 
+        {
+            width: 90%;
+        }
+
+        & ul
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+}

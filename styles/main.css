@@ -125,7 +125,7 @@
     width: 30%;
   }
 }
-@-webkit-keyframes loading-spiner {
+@-webkit-keyframes loading-spinerr {
   0% {
     width: 100vw;
     height: 100vh;
@@ -136,7 +136,7 @@
     opacity: 0%;
   }
 }
-@keyframes loading-spiner {
+@keyframes loading-spinerr {
   0% {
     width: 100vw;
     height: 100vh;
@@ -190,14 +190,12 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  width: 100%;
   height: 250px;
   border-radius: 17px;
   box-shadow: 0px 10px 20px #E9E8E8;
   margin-bottom: 19px;
 }
-
-.display__image {
+.showcase__display .display__image {
   display: flex;
   flex-wrap: wrap;
   border-radius: 30px 30px 0px 0px;
@@ -207,8 +205,13 @@ h1 {
   width: 100%;
   overflow: hidden;
 }
-
-.display__new {
+.showcase__display .display__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.showcase__display .display__new {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -221,56 +224,120 @@ h1 {
   color: rgb(19, 146, 115);
   right: 5%;
 }
-
-.display__image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.display__title {
+.showcase__display .display__title {
   position: absolute;
   bottom: 15%;
   padding-left: 14px;
   font-weight: bold;
   color: black;
 }
-
-.display__localisation {
+.showcase__display .display__localisation {
   position: absolute;
   bottom: 5%;
   padding-left: 14px;
   color: black;
 }
-
-.display__heart--empty {
+.showcase__display .fa-heart {
+  font-size: x-large;
+  font-weight: 300;
+}
+.showcase__display .display__heart--empty {
   position: absolute;
   right: 10%;
   bottom: 10%;
   color: black;
   opacity: 1;
 }
-
-.fa-heart {
-  font-size: x-large;
-  font-weight: 300;
-}
-
-.display__heart--full {
+.showcase__display .display__heart--full {
   position: absolute;
   right: 10%;
   bottom: 10%;
   opacity: 0;
-  background-color: black;
+  background: #FF79DA;
+  background: linear-gradient(173deg, #FF79DA 5%, #9356DC 90%);
   -webkit-background-clip: text;
           background-clip: text;
   transition: opacity 1000ms;
 }
-.display__heart--full:hover {
+.showcase__display .display__heart--full:hover {
   opacity: 1;
 }
 
+#showcase-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  #showcase-desktop {
+    display: block;
+    width: 98%;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  #showcase-smarthpone {
+    display: none;
+  }
+  .showcase__display {
+    height: 700px;
+    position: relative;
+  }
+  .showcase__display:hover {
+    height: 700px;
+  }
+  .display__menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 90px;
+  }
+  .display__split {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 75px;
+  }
+  .display__split .display__title {
+    position: absolute;
+    bottom: 55%;
+    padding-left: 14px;
+    font-weight: bold;
+    color: black;
+  }
+  .display__split .display__localisation {
+    position: absolute;
+    bottom: 15%;
+    padding-left: 14px;
+    color: black;
+  }
+  .display__split .fa-heart {
+    font-size: xx-large;
+    font-weight: 300;
+  }
+  .display__split .display__heart--empty {
+    position: absolute;
+    right: 10%;
+    bottom: 30%;
+    color: black;
+    opacity: 1;
+  }
+  .display__split .display__heart--full {
+    position: absolute;
+    right: 10%;
+    bottom: 30%;
+    opacity: 0;
+    background: #FF79DA;
+    background: linear-gradient(173deg, #FF79DA 5%, #9356DC 90%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    transition: opacity 1000ms;
+  }
+  .display__split .display__heart--full:hover {
+    opacity: 1;
+  }
+}
 #text-area__submit-button {
   display: block;
   background-color: #9356DC;
@@ -340,6 +407,60 @@ h1 {
   height: 24px;
   position: absolute;
   left: -12px;
+}
+
+#menu {
+  background-color: rgb(246, 246, 246);
+  height: 1140px;
+}
+
+.entree__display {
+  opacity: 0;
+  -webkit-animation: loading-menu 3s 1 forwards;
+          animation: loading-menu 3s 1 forwards;
+}
+
+.plat__display {
+  opacity: 0;
+  -webkit-animation: loading-menu 3s 1s 1 forwards;
+          animation: loading-menu 3s 1s 1 forwards;
+}
+
+.dessert__display {
+  opacity: 0;
+  -webkit-animation: loading-menu 3s 2s 1 forwards;
+          animation: loading-menu 3s 2s 1 forwards;
+}
+
+#dessert__title {
+  position: relative;
+  padding-top: 35px;
+  padding-bottom: 26px;
+  padding-left: 21px;
+  font-weight: lighter;
+}
+
+#plat__title {
+  padding-top: 35px;
+  padding-bottom: 26px;
+  padding-left: 21px;
+  position: relative;
+  font-weight: lighter;
+}
+
+#entree__title {
+  position: relative;
+  padding-top: 18px;
+  padding-bottom: 26px;
+  padding-left: 21px;
+  font-weight: lighter;
+}
+
+.underline {
+  position: absolute;
+  border: 2px solid #99E2D0;
+  width: 40px;
+  top: 75%;
 }
 
 .rectangle-display {
@@ -426,6 +547,53 @@ h1 {
   transition: transform 420ms ease-in-out;
 }
 
+@media screen and (min-width: 1024px) {
+  .rectangle-display {
+    height: 68px;
+    width: 110%;
+    margin: auto;
+    margin-bottom: 14px;
+    border-radius: 18px;
+    position: relative;
+    box-shadow: 0px 5px 15px rgb(234, 234, 234);
+  }
+  .rectangle-display h3 {
+    width: 80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .rectangle-display .display__infos {
+    width: 80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  #menu__entree {
+    width: 26%;
+  }
+  #menu__plat {
+    width: 28%;
+  }
+  #menu__dessert {
+    width: 28%;
+  }
+  #entree__title {
+    padding-top: 10px;
+  }
+  #plat__title {
+    padding-top: 10px;
+  }
+  #dessert__title {
+    padding-top: 10px;
+  }
+  .underline {
+    position: absolute;
+    border: 2px solid #99E2D0;
+    width: 40px;
+    top: 68%;
+  }
+}
 #load-animation {
   -webkit-animation: loading-spiner 3s steps(1, jump-end) forwards;
           animation: loading-spiner 3s steps(1, jump-end) forwards;
@@ -577,14 +745,14 @@ footer nav li i {
   z-index: 1;
 }
 
-*#showcase {
+#showcase-smarthpone {
   width: 100%;
 }
 
 #restaurants h2 {
   height: 60px;
   width: 100%;
-  padding-top: 60px;
+  margin-top: 60px;
 }
 
 #explications {
@@ -595,6 +763,9 @@ footer nav li i {
 #localisation {
   height: 355px;
   width: 100%;
+}
+#localisation h2 {
+  opacity: 0;
 }
 
 #localisation__input-area {
@@ -670,6 +841,66 @@ footer nav li i {
   flex-wrap: wrap;
 }
 
+@media screen and (min-width: 1024px) {
+  #main__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  header {
+    order: 1;
+  }
+  #localisation {
+    order: 3;
+    width: 50%;
+    height: 440px;
+  }
+  #localisation h2 {
+    opacity: 1;
+    padding-top: 50px;
+    padding-bottom: 45px;
+    padding-left: 50px;
+  }
+  #localisation__text-area {
+    background-color: white;
+  }
+  #localisation__input-area {
+    width: 80%;
+    margin: auto;
+    border-radius: 24px;
+    height: 70px;
+  }
+  #localisation__input-area #input-area__input-bar {
+    font-weight: 700;
+    font-size: x-large;
+  }
+  #localisation__input-area #input-area__location-dot {
+    font-size: x-large;
+    padding-right: 50px;
+  }
+  #explications {
+    order: 2;
+    width: 50%;
+  }
+  #restaurants {
+    order: 4;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    order: 5;
+    height: 90px;
+  }
+  footer nav {
+    width: 90%;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+}
 /*--------------------------------------------------[ A la francaise HTML]--------------------------------------------------*/
 #top-section {
   position: relative;
@@ -711,37 +942,6 @@ footer nav li i {
 #menu {
   background-color: rgb(246, 246, 246);
   height: 1140px;
-}
-
-#dessert__title {
-  position: relative;
-  padding-top: 35px;
-  padding-bottom: 26px;
-  padding-left: 21px;
-  font-weight: lighter;
-}
-
-#plat__title {
-  padding-top: 35px;
-  padding-bottom: 26px;
-  padding-left: 21px;
-  position: relative;
-  font-weight: lighter;
-}
-
-#entree__title {
-  position: relative;
-  padding-top: 18px;
-  padding-bottom: 26px;
-  padding-left: 21px;
-  font-weight: lighter;
-}
-
-.underline {
-  position: absolute;
-  border: 2px solid #99E2D0;
-  width: 40px;
-  top: 75%;
 }
 
 #display__button {

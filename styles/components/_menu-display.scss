@@ -1,3 +1,62 @@
+#menu
+{
+    background-color: $light-grey;
+    height: 1140px;
+}
+
+.entree__display
+{
+    opacity: 0;
+    animation: loading-menu 3s 1 forwards;
+}
+
+.plat__display
+{
+    opacity: 0;
+    animation: loading-menu 3s 1s 1 forwards;
+}
+
+.dessert__display
+{
+    opacity: 0;
+    animation: loading-menu 3s 2s 1 forwards;
+}
+
+#dessert__title
+{   position: relative;
+    padding-top: 35px;
+    padding-bottom: 26px;
+    padding-left: 21px;
+    font-weight: lighter;
+}
+
+#plat__title
+{
+    padding-top: 35px;
+    padding-bottom: 26px;
+    padding-left: 21px;
+    position: relative;
+    font-weight: lighter;
+}
+
+#entree__title
+{
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 26px;
+    padding-left: 21px;
+    font-weight: lighter;
+}
+
+.underline
+{
+    position: absolute;
+    border: 2px solid $mint;
+    width: 40px;
+
+    top: 75%;  
+}
+
 .rectangle-display
 {
     background-color: white;
@@ -49,7 +108,6 @@
     {
         transform: translate(-55px, 0);
         opacity: 1;
-        
     }
 
     &:hover .ordering-pop-up__checked
@@ -64,13 +122,13 @@
         overflow: hidden;
         white-space: nowrap;
     }
+
     &:hover .display__infos
     {
         width: calc(100% - 120px);
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        
     }
 }
 
@@ -83,6 +141,7 @@
     top: 0%;
     right: -55px;
 
+    
     opacity: 0;
 
     border-radius: 0px 18px 18px 0px;
@@ -115,5 +174,81 @@
 
         transition: transform 420ms ease-in-out;
     }
+ }
 
+ @media screen and (min-width: 1024px)
+ {
+        .rectangle-display
+        {
+        height: 68px;
+        width: 110%;
+
+        margin: auto;
+
+        margin-bottom: 14px;
+
+        border-radius: 18px;
+
+        position: relative;
+
+        box-shadow: 0px 5px 15px $grey;
+
+        & h3
+        {
+            width: 80%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        & .display__infos
+        {
+            width: 80%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+    }
+
+
+ #menu
+ {
+    &__entree
+    {
+        width: 26%;
+    }
+    &__plat
+    {
+        width: 28%;
+    }
+    &__dessert
+    {
+        width: 28%;
+    }
+ }
+
+    #entree__title
+    {
+        padding-top: 10px;
+    }
+
+    #plat__title
+    {
+        padding-top: 10px;
+    }
+
+    #dessert__title
+    {   
+        padding-top: 10px;
+    }
+    
+    .underline
+    {
+    position: absolute;
+    border: 2px solid $mint;
+    width: 40px;
+
+    top: 68%;  
+    }
  }
