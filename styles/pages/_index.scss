@@ -1,39 +1,6 @@
-/*--------------------------------------------------[ Index HTML ]--------------------------------------------------*/
-#restaurants
-{   
-    display: flex;
-    flex-wrap: wrap;
-
-    padding-left: 20px;
-    padding-right: 20px;
-
-    height: 1225px;
-    width: 100%;
-
-    background-color: $light-grey;
-}
-
 #main__wrapper
 {
     z-index: 1;
-}
-
-#showcase-smarthpone
-{
-    width: 100%;
-}
-
-#restaurants h2
-{
-    height: 60px;
-    width: 100%;
-    margin-top: 60px;
-}
-
-#explications
-{
-    height: 440px;
-    width: 100%;
 }
 
 #localisation
@@ -43,45 +10,116 @@
 
     & h2
     {
-        opacity: 0;
+        display: none;
+    }
+
+    &__input-area
+    {
+        height: 50px;
+    
+        display: flex;
+        flex-wrap: wrap;    
+        justify-content: center;
+        align-items: center;
+
+        background-color: $grey;
+    }
+
+    &__text-area
+    {
+        height: 305px;
+        width: 100%;
+        margin: auto;
+
+        background-color: $light-grey;
+    }
+}
+
+#input-area
+{
+    &__location-dot
+    {
+        padding-right: 14px;
+    } 
+    
+    &__input-bar
+    {   
+        background-color: $grey;    
+    }
+}
+
+#text-area
+{
+    &__main-text
+    {
+        height: fit-content;
+        width: 100%;
+
+        padding-top: 48px;
+        padding-left: 18%;
+        padding-right: 25%;
+
+        font-weight: 700;
+        font-size: 700;
+        text-align: center;
+    }
+
+    &__sub-text
+    {
+        padding-top: 25px;
+        padding-left: 10%;
+        padding-right: 15%;
+        padding-bottom: 35px;
+
+        text-align: center;
     }
 }
 
 
-
-#localisation__input-area
+#explications
 {
-    background-color: $grey;
+    height: 440px;
+    width: 100%;
+    
+    display: flex;
+    flex-wrap: wrap;
 
-    height: 50px;
+    & h2
+    {
+        padding-top: 50px;
+        padding-bottom: 23px;
+        padding-left: 21px;
+    }
+}
+
+#showcase-smarthpone
+{
+    width: 100%;
+}
+
+#restaurants
+{   
+    height: 1225px;
+    width: 100%;
 
     display: flex;
     flex-wrap: wrap;
 
-    justify-content: center;
-    align-items: center;
-}
+    padding-left: 20px;
+    padding-right: 20px;
 
-#input-area__location-dot 
-{
-    padding-right: 14px;
-}
-
-#input-area__input-bar
-{
-    background-color: $grey;
-}
-
-
-
-#localisation__text-area
-{
     background-color: $light-grey;
-    height: 305px;
-    width: 100%;
-    margin: auto;
+
+    & h2
+    {
+        height: 90px;
+        width: 100%;
+
+        padding-top: 65px;
+    }
 }
 
+/*--------------------------------------------------[ Media Q 451px]--------------------------------------------------*/
 @media screen and ( min-width: 451px)
 {
     #localisation
@@ -95,6 +133,7 @@
     }
 }
 
+/*--------------------------------------------------[ Media Q 654px]--------------------------------------------------*/
 @media screen and (min-width: 645px) 
 {
     #localisation__text-area
@@ -108,53 +147,7 @@
     }
 }
 
-
-#text-area__main-text
-{
-    padding-top: 48px;
-   
-    width: 100%;
-    height: fit-content;
-
-    padding-left: 18%;
-    padding-right: 25%;
-
- 
-    text-align: center;
-
-    font-weight: 700;
-    font-size: 700;
-    
-}
-
-#text-area__sub-text
-{
-    padding-top: 25px;
-
-    padding-left: 10%;
-    padding-right: 15%;
-
-    padding-bottom: 35px;
-
-    text-align: center;
-}
-
-#explications h2
-{
-    padding-top: 50px;
-    padding-bottom: 23px;
-    padding-left: 21px;
-}
-
-#explications
-{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-
+/*--------------------------------------------------[ Media Q 1024px]--------------------------------------------------*/
 @media screen and (min-width: 1024px)
 {
     #main__wrapper 
@@ -167,15 +160,18 @@
     {
         order: 1;
     }
+
     #localisation
     {
         order: 3;
+
         width: 50%;
         height: 440px;
 
         & h2
         {
-            opacity: 1;
+            display: inline-block;
+
             padding-top: 50px;
             padding-bottom: 45px;
             padding-left: 50px;
@@ -188,11 +184,12 @@
 
         &__input-area
         {
+            height: 70px;
             width: 80%;
+
             margin: auto;
             border-radius: 24px;
-            height: 70px;
-
+            
             #input-area__input-bar
             {
                 font-weight: 700;
@@ -206,44 +203,58 @@
             }
         }
     }
+
     #explications
     {
         order: 2;
+
         width: 50%;
     }
+
     #restaurants
     {
         order: 4;
+
+        & h2
+        {
+            padding-top: 45px;
+        }
     }
+
     footer
     {
-        display: flex;
-        flex-direction: row;
         order: 5;
+
         height: 90px;
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
 
         & nav 
         {
-            width: 90%;
+            width: 75%;
         }
 
         & ul
         {
+            height: 100%;
+
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            align-items: center;
-            height: 100%;
-        }
+            
+            padding-top: 35px;
 
+        }
     }
 
-
-
-
-
-
-
-
-
+    #footer
+    {
+        &__logo
+        {
+            width: 20%;       
+        }
+    }
 }

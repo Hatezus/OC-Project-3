@@ -1,39 +1,17 @@
-#text-area__submit-button
+.submit-button
 {
-    display: block;
-    background-color: $purple;
-    color: white;
-    border-radius: 30px;
-
-    width: 58%;
     height: 50px;
+    width: 58%;
+   
+    display: block;
 
     margin: auto;
-
-    background: $pink;
-    background: linear-gradient(173deg, $pink 5%, $purple 90%);
-
+    
+    border-radius: 30px;
     box-shadow: 0px 10px 20px #E9E8E8;
-
-   
+       
+    color: white;
+    background-color: $purple;
+    background: linear-gradient(173deg, $pink 5%, $purple 90%);
 }
 
-#order__button
-    {
-        background-color: $purple;
-        color: white;
-        border-radius: 30px;
-    
-        width: 50%;
-        height: 50px;
-    
-        margin: auto;
-
-        
-    
-        background: $pink;
-        background: linear-gradient(173deg, $pink 5%, $purple 90%);
-
-        box-shadow: 0px 10px 20px #E9E8E8;
-    
-}

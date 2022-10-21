@@ -67,7 +67,7 @@
     }
   }
 
-@keyframes loading-spinerr
+@keyframes loading-spiner
   {
     0% {
       width: 100vw;
@@ -89,5 +89,12 @@
 
     100% {
       opacity: 1;
+    }
+  }
+
+@keyframes desktop-expand
+  {
+    100% {
+      height: 700px;
     }
   }

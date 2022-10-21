@@ -4,75 +4,61 @@
     height: 1140px;
 }
 
-.entree__display
-{
-    opacity: 0;
-    animation: loading-menu 3s 1 forwards;
-}
-
-.plat__display
-{
-    opacity: 0;
-    animation: loading-menu 3s 1s 1 forwards;
-}
-
-.dessert__display
-{
-    opacity: 0;
-    animation: loading-menu 3s 2s 1 forwards;
-}
-
 #dessert__title
 {   position: relative;
+
     padding-top: 35px;
     padding-bottom: 26px;
     padding-left: 21px;
+
     font-weight: lighter;
 }
 
 #plat__title
 {
+    position: relative;
+
     padding-top: 35px;
     padding-bottom: 26px;
     padding-left: 21px;
-    position: relative;
+    
     font-weight: lighter;
 }
 
 #entree__title
 {
     position: relative;
+
     padding-top: 18px;
     padding-bottom: 26px;
     padding-left: 21px;
+
     font-weight: lighter;
 }
 
 .underline
 {
-    position: absolute;
-    border: 2px solid $mint;
     width: 40px;
 
+    position: absolute;
     top: 75%;  
+    
+    border: 2px solid $mint;   
 }
 
 .rectangle-display
 {
-    background-color: white;
-
     height: 68px;
     width: 90%;
 
+    position: relative;
+    
+    margin-bottom: 14px;
     margin: auto;
 
-    margin-bottom: 14px;
-
-    border-radius: 18px;
-
-    position: relative;
-
+    border-radius: 18px; 
     box-shadow: 0px 5px 15px $grey;
+    background-color: white;
 
     & h3
     {
@@ -86,16 +72,19 @@
     & .display__infos
     {
         width: fit-content;
+
         margin-right: 0px;
         padding-left: 10px;
     }
 
     & .display__price
     {
-        font-weight: 700;
         position: absolute;
         right: 22px;
         bottom: 12px;
+        
+        font-weight: 700;
+        
         transition: transform 420ms ease-in-out;
     }
     
@@ -134,68 +123,65 @@
 
  .ordering-pop-up
  {
-    background-color: $mint;
     height: 68px;
     width: 55px;
+
     position: absolute;
     top: 0%;
     right: -55px;
 
-    
     opacity: 0;
 
+    background-color: $mint;
     border-radius: 0px 18px 18px 0px;
     
-
     transition: transform 330ms ease-in-out;
 
     &__dot
     {
-        position: absolute;
-        background-color: white;
         height: 25px;
         width: 25px;
+
+        position: absolute;
         top: calc(70% - 25px);
         right: calc(70% - 25px);
 
         border-radius: 50px;
-        
+        background-color: white;
     }
 
     &__checked
     {
         position: absolute;
-        color: $mint;
-
         top: calc(62% - 16px);
         right: calc(60% - 16px);
         
-        rotate: 90deg;
+        color: $mint;
 
+        rotate: 90deg;
         transition: transform 420ms ease-in-out;
     }
  }
 
  @media screen and (min-width: 1024px)
  {
-        .rectangle-display
-        {
+    .rectangle-display
+    {
         height: 68px;
         width: 110%;
 
         margin: auto;
-
         margin-bottom: 14px;
-
-        border-radius: 18px;
 
         position: relative;
 
+        border-radius: 18px;
         box-shadow: 0px 5px 15px $grey;
 
         & h3
         {
             width: 80%;
+
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
@@ -204,29 +190,28 @@
         & .display__infos
         {
             width: 80%;
+
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
         }
-
     }
 
-
- #menu
- {
-    &__entree
+    #menu
     {
-        width: 26%;
+        &__entree
+        {
+            width: 26%;
+        }
+        &__plat
+        {
+            width: 28%;
+        }
+        &__dessert
+        {
+            width: 28%;
+        }
     }
-    &__plat
-    {
-        width: 28%;
-    }
-    &__dessert
-    {
-        width: 28%;
-    }
- }
 
     #entree__title
     {
@@ -242,13 +227,14 @@
     {   
         padding-top: 10px;
     }
-    
+
     .underline
     {
-    position: absolute;
-    border: 2px solid $mint;
-    width: 40px;
+        width: 40px;
 
-    top: 68%;  
+        position: absolute;
+        top: 68%;  
+
+        border: 2px solid $mint;
     }
- }
+}

@@ -1,62 +1,77 @@
 #load-animation
 {
-  animation: loading-spiner 3s steps(1, jump-end) forwards;
+  display: flex;
+
   align-items: center;
   justify-content: center;
-  display: flex;
+
+  animation: loading-spiner 3s steps(1, jump-end) forwards;
 }
 
 .loader
 {
-  width: $loader-dimension;
-  height: $loader-dimension;
- 
-  .loader__spiner 
+  height: 180px;
+  width: 180px;
+
+  &__spiner 
   {
+    height: 45%;
+    width: 60%;
+
     position: relative;
     top: 10%;
-  
     left: 0;
+
     z-index: -1;
-    width: 60%;
-    height: 45%;
+
     border: 10px solid transparent;
     border-bottom: 10px solid $mint;
     border-radius: 50%;
+
     animation: loader $loader-timing infinite;
     animation-timing-function: linear;
   }
-  .loader__pan 
+  
+  &__pan 
   {
-    display:flex;
     width: 100%;
+
+    display:flex;
+
     animation: pan $loader-timing infinite;
   }
 
-  .pan__body
+  .pan
   {
-    width: 60%;
-    height: 20px;
-    background: linear-gradient($pink, $purple);
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    &__body
+    {
+      height: 20px;
+      width: 60%;
+
+      background: linear-gradient($pink, $purple);
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    &__handle
+    {
+      height: 10px;
+      width: 40%;
+
+      background: linear-gradient($pink, $purple);
+      border-radius: 10px;
+    }
   }
 
-  .pan__handle
+  &__shadow 
   {
-    width: 40%;
-    height: 10px;
-    background: linear-gradient($pink, $purple);
-    border-radius: 10px;
-  }
-  
-  .loader__shadow 
-  {
+    width: 30%;
+    height: 8px;
+    
     position: relative;
     top: 15%;
     left: 15%;
-    width: 30%;
-    height: 8px;
+
     background: $grey;
     border-radius: 20px;
     animation: shadow $loader-timing infinite;

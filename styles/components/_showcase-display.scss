@@ -1,224 +1,279 @@
-.showcase__display
+.showcase
 {
-    display: flex;
-    flex-wrap: wrap;
-
-    position: relative;
-
-    
-    height: 250px;
-
-    border-radius: 17px;
-
-    box-shadow: 0px 10px 20px #E9E8E8;
-
-    margin-bottom: 19px;
-
-    .display__image
+    &-smarthpone
     {
-        display: flex;
-        flex-wrap: wrap;
-
-        border-radius: 30px 30px 0px 0px;
-
-        align-items: center;
-        justify-content: center;
-
-        height: 175px;
-        width: 100%;
-        overflow: hidden;
-
-        & img
-        {
-            width: 100%;
-            height: 100%;
-            
-            
-            object-fit: cover;
-        }
-    }
-
-    .display__new
-    {
-        display: flex;
-        flex-wrap: wrap;
-
-        justify-content: center;
-        align-items: center;
-
-        position: absolute;
-
-        height: 30px;
-        width: 80px;
-        
-        margin-top: 14px;
-
-        background-color: $mint;
-        color: $dark-mint;
-
-        right: 5%;
-    }
-
-    .display__title
-    {
-        position: absolute;
-        bottom: 15%;
-        padding-left: 14px;
-        font-weight: bold;
-        color: black;
-    }
-    
-    .display__localisation
-    {
-        position: absolute;
-        bottom: 5%;
-        padding-left: 14px;
-        color: black;    
-    }
-    
-    .fa-heart
-    {
-        font-size: x-large;
-        font-weight: 300;
-    }
-    
-    .display__heart--empty
-    {
-        position: absolute;
-        right: 10%;
-        bottom: 10%;
-        color: black;
-        opacity: 1;
-    }
-    
-     .display__heart--full
-     {
-        position: absolute;
-        right: 10%;
-        bottom: 10%;
-        opacity: 0;
-    
-        background: $pink;
-        background: linear-gradient(173deg, $pink 5%, $purple 90%);
-    
-        background-clip: text;
-        
-        transition: opacity 1000ms;
-    
-        &:hover
-        {
-            opacity: 1;
-        }
-    }
-}
-
-#showcase-desktop
-{
-   display: none;
-}
-
-
-
-
-@media screen and (min-width: 1024px)
-{
-    #showcase-desktop
-    {
-        display: block;
         width: 98%;
-        margin: auto;
+
+        display: block;
         flex-wrap: wrap;
+
+        margin: auto;
     }
 
-    #showcase-smarthpone
+    &-desktop
     {
         display: none;
     }
+}
 
-    .showcase__display
+.showcase__display
+{
+    height: 250px;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: 24px;
+
+    position: relative;  
+
+    border-radius: 17px;
+
+    box-shadow: 0px 10px 20px #E9E8E8;   
+
+    .display
     {
-        height: 700px;
-        position: relative;
-        &:hover
+        &__image
         {
-            height: 700px;
+            height: 175px;
+            width: 100%;
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+    
+            border-radius: 30px 30px 0px 0px;
+
+            & img
+            {
+                width: 100%;
+                height: 100%;
+ 
+                object-fit: cover;
+            }
         }
-        &:hover .display__menu
-        {
+
+        &__new
+        {    
+            height: 30px;
+            width: 80px;
+
+            display: flex;
+            flex-wrap: wrap;    
+            justify-content: center;
+            align-items: center;
+    
+            position: absolute;
+            right: 5%;
             
+            margin-top: 14px;
+    
+            background-color: $mint;
+            color: $dark-mint;
+        }
+
+        &__title
+        {
+            position: absolute;
+            bottom: 15%;
+            padding-left: 14px;
+            font-weight: bold;
+            color: black;
+        }
+
+        &__localisation
+        {
+            position: absolute;
+            bottom: 5%;
+            padding-left: 14px;
+            color: black;    
+        }
+
+        &__heart
+        {
+            &--empty
+            {
+                position: absolute;
+                right: 10%;
+                bottom: 10%;
+
+                opacity: 1;
+                color: black;
+            }
+
+            &--full
+            {
+               position: absolute;
+               right: 10%;
+               bottom: 10%;
+
+               opacity: 0;
+           
+               background: $pink;
+               background: linear-gradient(173deg, $pink 5%, $purple 90%);
+           
+               background-clip: text;
+               
+               transition: opacity 1000ms;
+           
+               &:hover
+               {
+                   opacity: 1;
+               }
+           }
+        }
+        
+        .fa-heart
+        {
+            font-size: x-large;
+            font-weight: 300;
+        }
+    }   
+}
+
+/*--------------------------------------------------[ Media Q 1024px ]--------------------------------------------------*/
+@media screen and (min-width: 1024px)
+{
+    .showcase
+    {
+        &-desktop
+        {
+            width: 98%;
+
+            display: block;
+            flex-wrap: wrap;
+
+            margin: auto;
+        }
+        &-smarthpone
+        {
+            display: none;
+        }
+
+        &__display
+        {
+            position: relative;
+            &:hover
+            {
+                animation: desktop-expand 2s ease-in-out  both;
+            }
+            &:hover #menu__entree
+            {
+                animation: loading-menu 3s 1.3s 1 forwards;
+            }
+            &:hover #menu__plat
+            {
+                animation: loading-menu 3s 2s 1 forwards;
+            }
+            &:hover #menu__dessert
+            {
+                animation: loading-menu 3s 2.7s 1 forwards;
+            }
+        }
+    }
+ 
+
+    #menu
+    {
+        &__entree
+        {
+            opacity: 0;
+        }
+        &__plat
+        {
+             opacity: 0;
+        }
+        &__dessert
+        {
+            opacity: 0;
         }
     }
 
+
     .display__menu
     {
+        width: 100%;
+
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-        width: 100%;
-        margin-bottom: 90px;
+  
+        margin-bottom: 110px;        
     }
 
     .display__split
-    {
+    {        
+        width: 100%;
+        height: 75px;
+        
         position: absolute;
 
         bottom: 0%;
-        width: 100%;
-        height: 75px;
 
-        .display__title
+        margin-bottom: 5px;
+
+        .display
         {
-            position: absolute;
-            bottom: 55%;
-            padding-left: 14px;
-            font-weight: bold;
-            color: black;
+            &__title
+            {
+                position: absolute;
+                bottom: 55%;
+                padding-left: 14px;
+                font-weight: bold;
+                color: black;
+            }
+
+            &__localisation
+            {
+                position: absolute;
+                bottom: 15%;
+                padding-left: 14px;
+                color: black;    
+            }
+
+            &__heart
+            {
+                &--empty
+                {
+                    position: absolute;
+                    right: 10%;
+                    bottom: 30%;
+                    color: black;
+                    opacity: 1;
+                }
+
+                &--full
+                {
+                   position: absolute;
+                   right: 10%;
+                   bottom: 30%;
+                   opacity: 0;
+               
+                   background: $pink;
+                   background: linear-gradient(173deg, $pink 5%, $purple 90%);
+               
+                   background-clip: text;
+                   
+                   transition: opacity 1000ms;
+               
+                   &:hover
+                   {
+                       opacity: 1;
+                   }
+               }
+            }
         }
-        
-        .display__localisation
-        {
-            position: absolute;
-            bottom: 15%;
-            padding-left: 14px;
-            color: black;    
-        }
-        
+
         .fa-heart
         {
             font-size: xx-large;
             font-weight: 300;
         }
-        
-        .display__heart--empty
-        {
-            position: absolute;
-            right: 10%;
-            bottom: 30%;
-            color: black;
-            opacity: 1;
-        }
-        
-         .display__heart--full
-         {
-            position: absolute;
-            right: 10%;
-            bottom: 30%;
-            opacity: 0;
-        
-            background: $pink;
-            background: linear-gradient(173deg, $pink 5%, $purple 90%);
-        
-            background-clip: text;
-            
-            transition: opacity 1000ms;
-        
-            &:hover
-            {
-                opacity: 1;
-            }
-        }
- 
     }
 }
