@@ -2,6 +2,21 @@
 {
     background-color: $light-grey;
     height: 1140px;
+
+    &__entree
+    {
+       height: 30%; 
+    }
+
+    &__plat
+    {
+        height: 30%;
+    }
+
+    &__dessert
+    {
+        height: 30%;
+    }
 }
 
 #dessert__title
@@ -52,7 +67,7 @@
     width: 90%;
 
     position: relative;
-    
+   
     margin-bottom: 14px;
     margin: auto;
 
@@ -163,6 +178,8 @@
     }
  }
 
+ /*--------------------------------------------------[ Media Q 1024px ]--------------------------------------------------*/
+
  @media screen and (min-width: 1024px)
  {
     .rectangle-display
@@ -201,14 +218,17 @@
     {
         &__entree
         {
+            height: auto;
             width: 26%;
         }
         &__plat
         {
+            height: auto;
             width: 28%;
         }
         &__dessert
         {
+            height: auto;
             width: 28%;
         }
     }
