@@ -177,17 +177,22 @@
 /*--------------------------------------------------[Vendors]--------------------------------------------------*/
 /*--------------------------------------------------[Base]--------------------------------------------------*/
 * {
-  max-width: 1920px;
+  margin: 0;
   border: none;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+body {
+  max-width: 1920px;
+  margin: auto;
+  overflow-x: hidden;
 }
 
 body {
@@ -202,6 +207,7 @@ h1 {
   width: 58%;
   display: block;
   margin: auto;
+  margin-bottom: 85px;
   border-radius: 30px;
   box-shadow: 0px 10px 20px #E9E8E8;
   color: white;
@@ -254,7 +260,6 @@ h1 {
 
 #menu {
   background-color: rgb(246, 246, 246);
-  height: 1140px;
 }
 #menu__entree {
   height: 30%;
@@ -287,7 +292,7 @@ h1 {
   padding-top: 18px;
   padding-bottom: 26px;
   padding-left: 21px;
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 .underline {
@@ -295,14 +300,16 @@ h1 {
   position: absolute;
   top: 75%;
   border: 2px solid #99E2D0;
+  background-color: #99E2D0;
 }
 
 .rectangle-display {
   height: 68px;
   width: 90%;
   position: relative;
-  margin-bottom: 14px;
+  overflow: hidden;
   margin: auto;
+  margin-bottom: 14px;
   border-radius: 18px;
   box-shadow: 0px 5px 15px rgb(234, 234, 234);
   background-color: white;
@@ -316,11 +323,12 @@ h1 {
   padding-bottom: 5px;
 }
 .rectangle-display .display__infos {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 80%;
   margin-right: 0px;
   padding-left: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .rectangle-display .display__price {
   position: absolute;
@@ -556,26 +564,21 @@ h1 {
   position: absolute;
   right: 10%;
   bottom: 10%;
-  opacity: 1;
   color: black;
+  cursor: pointer;
 }
 .showcase__display .display__heart--full {
+  color: #FFF;
   position: absolute;
   right: 10%;
   bottom: 10%;
+  font-weight: bold;
   opacity: 0;
-  background: #FF79DA;
-  background: linear-gradient(173deg, #FF79DA 5%, #9356DC 90%);
-  -webkit-background-clip: text;
-          background-clip: text;
   transition: opacity 1000ms;
 }
 .showcase__display .display__heart--full:hover {
   opacity: 1;
-}
-.showcase__display .display .fa-heart {
-  font-size: x-large;
-  font-weight: 300;
+  color: #9356DC;
 }
 
 /*--------------------------------------------------[ Media Q 1024px ]--------------------------------------------------*/
@@ -646,31 +649,6 @@ h1 {
     padding-left: 14px;
     color: black;
   }
-  .display__split .display__heart--empty {
-    position: absolute;
-    right: 10%;
-    bottom: 30%;
-    color: black;
-    opacity: 1;
-  }
-  .display__split .display__heart--full {
-    position: absolute;
-    right: 10%;
-    bottom: 30%;
-    opacity: 0;
-    background: #FF79DA;
-    background: linear-gradient(173deg, #FF79DA 5%, #9356DC 90%);
-    -webkit-background-clip: text;
-            background-clip: text;
-    transition: opacity 1000ms;
-  }
-  .display__split .display__heart--full:hover {
-    opacity: 1;
-  }
-  .display__split .fa-heart {
-    font-size: xx-large;
-    font-weight: 300;
-  }
 }
 /*--------------------------------------------------[Layout]--------------------------------------------------*/
 header {
@@ -733,18 +711,19 @@ footer nav li i {
   margin-bottom: 30px;
   margin-top: 30px;
   color: white;
+  fill: white;
 }
-#footer img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  color: white;
+#footer__logo path {
+  fill: #fff;
 }
 
 /*--------------------------------------------------[Pages]--------------------------------------------------*/
 #main__wrapper {
   z-index: 1;
+}
+
+header {
+  box-shadow: 0px 5px 5px #d4d3d3;
 }
 
 #localisation {
@@ -760,6 +739,7 @@ footer nav li i {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  font-size: x-large;
   background-color: rgb(234, 234, 234);
 }
 #localisation__text-area {
@@ -783,9 +763,9 @@ footer nav li i {
   width: 100%;
   padding-top: 48px;
   padding-left: 18%;
-  padding-right: 25%;
+  padding-right: 18%;
   font-weight: 700;
-  font-size: 700;
+  font-size: x-large;
   text-align: center;
 }
 #text-area__sub-text {
@@ -949,7 +929,7 @@ footer nav li i {
 }
 #top-section__text-area--title {
   padding-right: 86px;
-  font-size: xx-large;
+  font-size: x-large;
 }
 #top-section .fa-heart {
   font-size: x-large;

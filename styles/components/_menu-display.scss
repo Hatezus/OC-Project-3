@@ -1,7 +1,6 @@
 #menu
 {
     background-color: $light-grey;
-    height: 1140px;
 
     &__entree
     {
@@ -48,7 +47,7 @@
     padding-bottom: 26px;
     padding-left: 21px;
 
-    font-weight: lighter;
+    font-weight: normal;
 }
 
 .underline
@@ -58,7 +57,8 @@
     position: absolute;
     top: 75%;  
     
-    border: 2px solid $mint;   
+    border: 2px solid $mint;
+    background-color: $mint;  
 }
 
 .rectangle-display
@@ -67,10 +67,12 @@
     width: 90%;
 
     position: relative;
-   
-    margin-bottom: 14px;
-    margin: auto;
 
+    overflow: hidden;
+   
+    margin: auto;
+    margin-bottom: 14px;
+    
     border-radius: 18px; 
     box-shadow: 0px 5px 15px $grey;
     background-color: white;
@@ -86,10 +88,14 @@
 
     & .display__infos
     {
-        width: fit-content;
+        width: 80%;
 
         margin-right: 0px;
         padding-left: 10px;
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
     & .display__price

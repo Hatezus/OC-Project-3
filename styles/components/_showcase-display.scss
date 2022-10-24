@@ -100,39 +100,29 @@
                 position: absolute;
                 right: 10%;
                 bottom: 10%;
-
-                opacity: 1;
                 color: black;
+                cursor: pointer;
             }
 
             &--full
             {
-               position: absolute;
-               right: 10%;
-               bottom: 10%;
+                color: #FFF;
+                position: absolute;
+                right: 10%;
+                bottom: 10%;
+                font-weight: bold;
+                opacity: 0 ;
+                transition:  opacity 1000ms;
 
-               opacity: 0;
-           
-               background: $pink;
-               background: linear-gradient(173deg, $pink 5%, $purple 90%);
-           
-               background-clip: text;
-               
-               transition: opacity 1000ms;
-           
-               &:hover
-               {
-                   opacity: 1;
-               }
-           }
+                &:hover
+                {
+                    opacity: 1;
+                    color: $purple;
+
+                }
+            }
         }
-        
-        .fa-heart
-        {
-            font-size: x-large;
-            font-weight: 300;
-        }
-    }   
+    } 
 }
 
 /*--------------------------------------------------[ Media Q 1024px ]--------------------------------------------------*/
@@ -237,43 +227,6 @@
                 color: black;    
             }
 
-            &__heart
-            {
-                &--empty
-                {
-                    position: absolute;
-                    right: 10%;
-                    bottom: 30%;
-                    color: black;
-                    opacity: 1;
-                }
-
-                &--full
-                {
-                   position: absolute;
-                   right: 10%;
-                   bottom: 30%;
-                   opacity: 0;
-               
-                   background: $pink;
-                   background: linear-gradient(173deg, $pink 5%, $purple 90%);
-               
-                   background-clip: text;
-                   
-                   transition: opacity 1000ms;
-               
-                   &:hover
-                   {
-                       opacity: 1;
-                   }
-               }
-            }
-        }
-
-        .fa-heart
-        {
-            font-size: xx-large;
-            font-weight: 300;
         }
     }
 }
