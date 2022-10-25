@@ -185,7 +185,6 @@
  }
 
  /*--------------------------------------------------[ Media Q 1024px ]--------------------------------------------------*/
-
  @media screen and (min-width: 1024px)
  {
     .rectangle-display--desktop
@@ -220,7 +219,7 @@
         }
     }
 
-    #menu
+    .menu
     {
         &__entree--desktop
         {
@@ -248,27 +247,30 @@
         }
     }
 
-    #entree__title
+    .entree__title
     {
         padding-top: 10px;
+        margin-bottom: 20px;
     }
 
-    #plat__title
+    .plat__title
     {
         padding-top: 10px;
+        margin-bottom: 20px;
     }
 
-    #dessert__title
+    .dessert__title
     {   
         padding-top: 10px;
+        margin-bottom: 20px;
     }
 
-    .underline
+    .underline--desktop
     {
         width: 40px;
 
         position: absolute;
-        top: 68%;  
+        top: 25%;  
 
         border: 2px solid $mint;
     }

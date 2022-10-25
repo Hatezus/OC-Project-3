@@ -166,12 +166,12 @@
 }
 @-webkit-keyframes desktop-expand {
   100% {
-    height: 700px;
+    height: 650px;
   }
 }
 @keyframes desktop-expand {
   100% {
-    height: 700px;
+    height: 650px;
   }
 }
 /*--------------------------------------------------[Vendors]--------------------------------------------------*/
@@ -412,37 +412,40 @@ h1 {
     overflow: hidden;
     white-space: nowrap;
   }
-  #menu__entree--desktop {
+  .menu__entree--desktop {
     height: auto;
     width: 26%;
     display: none;
     opacity: 0;
   }
-  #menu__plat--desktop {
+  .menu__plat--desktop {
     height: auto;
     width: 28%;
     display: none;
     opacity: 0;
   }
-  #menu__dessert--desktop {
+  .menu__dessert--desktop {
     height: auto;
     width: 28%;
     display: none;
     opacity: 0;
   }
-  #entree__title {
+  .entree__title {
     padding-top: 10px;
+    margin-bottom: 20px;
   }
-  #plat__title {
+  .plat__title {
     padding-top: 10px;
+    margin-bottom: 20px;
   }
-  #dessert__title {
+  .dessert__title {
     padding-top: 10px;
+    margin-bottom: 20px;
   }
-  .underline {
+  .underline--desktop {
     width: 40px;
     position: absolute;
-    top: 68%;
+    top: 25%;
     border: 2px solid #99E2D0;
   }
 }
@@ -605,17 +608,17 @@ h1 {
     -webkit-animation: desktop-expand 2s ease-in-out both;
             animation: desktop-expand 2s ease-in-out both;
   }
-  .showcase__display:hover #menu__entree--desktop {
+  .showcase__display:hover .menu__entree--desktop {
     display: block;
     -webkit-animation: loading-menu 3s 1.3s 1 forwards;
             animation: loading-menu 3s 1.3s 1 forwards;
   }
-  .showcase__display:hover #menu__plat--desktop {
+  .showcase__display:hover .menu__plat--desktop {
     display: block;
     -webkit-animation: loading-menu 3s 2s 1 forwards;
             animation: loading-menu 3s 2s 1 forwards;
   }
-  .showcase__display:hover #menu__dessert--desktop {
+  .showcase__display:hover .menu__dessert--desktop {
     display: block;
     -webkit-animation: loading-menu 3s 2.7s 1 forwards;
             animation: loading-menu 3s 2.7s 1 forwards;
