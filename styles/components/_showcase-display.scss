@@ -151,38 +151,23 @@
             {
                 animation: desktop-expand 2s ease-in-out  both;
             }
-            &:hover #menu__entree
+            &:hover #menu__entree--desktop
             {
+                display: block;
                 animation: loading-menu 3s 1.3s 1 forwards;
             }
-            &:hover #menu__plat
+            &:hover #menu__plat--desktop
             {
+                display: block;
                 animation: loading-menu 3s 2s 1 forwards;
             }
-            &:hover #menu__dessert
+            &:hover #menu__dessert--desktop
             {
+                display: block;
                 animation: loading-menu 3s 2.7s 1 forwards;
             }
         }
     }
- 
-
-    #menu
-    {
-        &__entree
-        {
-            opacity: 0;
-        }
-        &__plat
-        {
-             opacity: 0;
-        }
-        &__dessert
-        {
-            opacity: 0;
-        }
-    }
-
 
     .display__menu
     {
@@ -229,4 +214,5 @@
 
         }
     }
+    
 }

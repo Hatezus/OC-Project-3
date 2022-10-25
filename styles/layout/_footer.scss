@@ -50,6 +50,42 @@ footer
         }
     }
 }
+/*--------------------------------------------------[ Media Q 1024px ]--------------------------------------------------*/
+@media screen and (min-width: 1024px)
+{
+    footer
+    {
+        order: 5;
 
+        height: 90px;
+        width: 100%;
 
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
 
+        & nav 
+        {
+            width: 75%;
+        }
+
+        & ul
+        {
+            height: 100%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+            padding-top: 35px;
+        }
+    }
+
+    #footer
+    {
+        &__logo
+        {
+            width: 20%;       
+        }
+    }
+}

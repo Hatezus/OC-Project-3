@@ -188,7 +188,7 @@
 
  @media screen and (min-width: 1024px)
  {
-    .rectangle-display
+    .rectangle-display--desktop
     {
         height: 68px;
         width: 110%;
@@ -222,20 +222,29 @@
 
     #menu
     {
-        &__entree
+        &__entree--desktop
         {
             height: auto;
             width: 26%;
+
+            display: none;
+            opacity: 0;
         }
-        &__plat
+        &__plat--desktop
         {
             height: auto;
             width: 28%;
+
+            display: none;
+            opacity: 0;
         }
-        &__dessert
+        &__dessert--desktop
         {
             height: auto;
             width: 28%;
+
+            display: none;
+            opacity: 0;
         }
     }
 

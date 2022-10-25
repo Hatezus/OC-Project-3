@@ -1,4 +1,3 @@
-/*--------------------------------------------------[ A la francaise HTML]--------------------------------------------------*/
 #top-section
 {
     position: relative;
@@ -32,6 +31,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        justify-content: space-around;
         align-items: center;
 
         position: absolute;
@@ -45,7 +45,6 @@
 
         &--title
         {
-            padding-right: 86px;
             font-size: x-large;
         }
     }
