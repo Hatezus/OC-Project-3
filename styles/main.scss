@@ -9,12 +9,12 @@
 /*--------------------------------------------------[Components]--------------------------------------------------*/
 @import "./components/submit-button";
 @import "./components/explanation-snippet";
-@import "./components/menu-display";
 @import "./components/loader";
-@import "./components/showcase-display";
 /*--------------------------------------------------[Layout]--------------------------------------------------*/
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/showcase-display";
+@import "./layout/menu-display";
 /*--------------------------------------------------[Pages]--------------------------------------------------*/
 @import "./pages/index";
 @import "./pages/menu_pages";
