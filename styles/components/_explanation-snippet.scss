@@ -19,11 +19,13 @@
     background-color: $light-grey;
     box-shadow: 0px 5px 15px $grey;
 
-    transition: background-color 300ms;
+    transition: background-color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out;
 
     &:hover 
     {    
         background-color: rgb(245, 237, 255);
+        box-shadow: 0px 10px 15px $grey;
     }
 
     &:hover > .explications__snippet--icon i
