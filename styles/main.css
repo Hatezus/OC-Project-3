@@ -276,8 +276,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-animation: loading-spiner 3s steps(1, jump-end) forwards;
-          animation: loading-spiner 3s steps(1, jump-end) forwards;
+  -webkit-animation: loading-spiner 3s steps(1) forwards;
+          animation: loading-spiner 3s steps(1) forwards;
 }
 
 .loader {
@@ -675,7 +675,7 @@ footer nav li i {
   opacity: 1;
 }
 .rectangle-display:hover .ordering-pop-up__checked {
-  transform: rotate(260deg);
+  transform: rotate(380deg);
 }
 .rectangle-display:hover h3 {
   width: calc(100% - 120px);
@@ -709,7 +709,7 @@ footer nav li i {
   top: calc(62% - 16px);
   right: calc(60% - 16px);
   color: #99E2D0;
-  rotate: 90deg;
+  transform: rotate(90deg);
   transition: transform 420ms ease-in-out;
 }
 

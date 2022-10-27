@@ -130,7 +130,7 @@
 
     &:hover .ordering-pop-up__checked
     {
-        transform: rotate(260deg);
+        transform: rotate(380deg);
     }
 
     &:hover h3
@@ -181,7 +181,7 @@
         
         color: $mint;
 
-        rotate: 90deg;
+        transform: rotate(90deg);
         transition: transform 420ms ease-in-out;
     }
  }

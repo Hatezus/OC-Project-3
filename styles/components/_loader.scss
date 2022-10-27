@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
 
-  animation: loading-spiner 3s steps(1, jump-end) forwards;
+  animation: loading-spiner 3s steps(1) forwards;
 }
 
 .loader
