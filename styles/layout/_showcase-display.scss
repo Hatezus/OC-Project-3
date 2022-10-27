@@ -81,7 +81,7 @@
             position: absolute;
             bottom: 15%;
             padding-left: 14px;
-            font-weight: bold;
+            font-weight: bolder;
             color: black;
         }
 
@@ -101,7 +101,8 @@
                 right: 10%;
                 bottom: 10%;
                 color: black;
-                cursor: pointer;
+                font-size: 25px;
+                font-weight: lighter;
             }
 
             &--full
@@ -110,15 +111,16 @@
                 position: absolute;
                 right: 10%;
                 bottom: 10%;
-                font-weight: bold;
                 opacity: 0 ;
                 transition:  opacity 1000ms;
+                font-size: 25px;
 
                 &:hover
                 {
                     opacity: 1;
-                    color: $purple;
-
+                    background: linear-gradient(173deg, $pink 5%, $purple 90%);
+                    background-clip: text;
+                    color: transparent;
                 }
             }
         }
@@ -210,6 +212,27 @@
                 bottom: 15%;
                 padding-left: 14px;
                 color: black;    
+            }
+
+            &__heart
+            {
+                &--empty
+                {
+                    position: absolute;
+                    right: 10%;
+                    bottom: 15%;
+
+                    font-size: 35px;
+                }
+    
+                &--full
+                {
+                    position: absolute;
+                    right: 10%;
+                    bottom: 15%;    
+
+                    font-size: 35px;
+                }
             }
 
         }

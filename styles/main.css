@@ -201,7 +201,13 @@ body {
 
 h1 {
   font-family: "Shrikhand";
-} /*--------------------------------------------------[Components]--------------------------------------------------*/
+}
+
+h2 {
+  font-weight: 100;
+}
+
+/*--------------------------------------------------[Components]--------------------------------------------------*/
 .submit-button {
   height: 50px;
   width: 58%;
@@ -210,6 +216,7 @@ h1 {
   margin-bottom: 85px;
   border-radius: 30px;
   box-shadow: 0px 10px 20px #E9E8E8;
+  font-size: 15px;
   color: white;
   background-color: #9356DC;
   background: linear-gradient(173deg, #FF79DA 5%, #9356DC 90%);
@@ -230,6 +237,7 @@ h1 {
   border-radius: 24px 24px 24px 24px;
   background-color: rgb(246, 246, 246);
   box-shadow: 0px 5px 15px rgb(234, 234, 234);
+  font-weight: 600;
   transition: background-color 300ms ease-in-out;
   transition: box-shadow 300ms ease-in-out;
 }
@@ -462,7 +470,7 @@ footer nav li i {
   position: absolute;
   bottom: 15%;
   padding-left: 14px;
-  font-weight: bold;
+  font-weight: bolder;
   color: black;
 }
 .showcase__display .display__localisation {
@@ -476,20 +484,24 @@ footer nav li i {
   right: 10%;
   bottom: 10%;
   color: black;
-  cursor: pointer;
+  font-size: 25px;
+  font-weight: lighter;
 }
 .showcase__display .display__heart--full {
   color: #FFF;
   position: absolute;
   right: 10%;
   bottom: 10%;
-  font-weight: bold;
   opacity: 0;
   transition: opacity 1000ms;
+  font-size: 25px;
 }
 .showcase__display .display__heart--full:hover {
   opacity: 1;
-  color: #9356DC;
+  background: linear-gradient(173deg, #FF79DA 5%, #9356DC 90%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
 }
 
 /*--------------------------------------------------[ Media Q 1024px ]--------------------------------------------------*/
@@ -554,6 +566,18 @@ footer nav li i {
     padding-left: 14px;
     color: black;
   }
+  .display__split .display__heart--empty {
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+    font-size: 35px;
+  }
+  .display__split .display__heart--full {
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+    font-size: 35px;
+  }
 }
 #menu {
   background-color: rgb(246, 246, 246);
@@ -573,7 +597,8 @@ footer nav li i {
   padding-top: 35px;
   padding-bottom: 26px;
   padding-left: 21px;
-  font-weight: lighter;
+  font-family: "Roboto";
+  font-weight: 700;
 }
 
 #plat__title {
@@ -581,7 +606,8 @@ footer nav li i {
   padding-top: 35px;
   padding-bottom: 26px;
   padding-left: 21px;
-  font-weight: lighter;
+  font-family: "Roboto";
+  font-weight: 400;
 }
 
 #entree__title {
@@ -589,7 +615,8 @@ footer nav li i {
   padding-top: 18px;
   padding-bottom: 26px;
   padding-left: 21px;
-  font-weight: normal;
+  font-family: "Roboto";
+  font-weight: 400;
 }
 
 .underline {
@@ -612,9 +639,10 @@ footer nav li i {
   background-color: white;
 }
 .rectangle-display h3 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 80%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   padding-top: 10px;
   padding-left: 10px;
   padding-bottom: 5px;
@@ -646,15 +674,9 @@ footer nav li i {
 }
 .rectangle-display:hover h3 {
   width: calc(100% - 120px);
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 .rectangle-display:hover .display__infos {
   width: calc(100% - 120px);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .ordering-pop-up {
@@ -688,27 +710,6 @@ footer nav li i {
 
 /*--------------------------------------------------[ Media Q 1024px ]--------------------------------------------------*/
 @media screen and (min-width: 1024px) {
-  .rectangle-display--desktop {
-    height: 68px;
-    width: 110%;
-    margin: auto;
-    margin-bottom: 14px;
-    position: relative;
-    border-radius: 18px;
-    box-shadow: 0px 5px 15px rgb(234, 234, 234);
-  }
-  .rectangle-display--desktop h3 {
-    width: 80%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  .rectangle-display--desktop .display__infos {
-    width: 80%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
   .menu__entree--desktop {
     height: auto;
     width: 26%;
@@ -768,7 +769,6 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  font-size: x-large;
   background-color: rgb(234, 234, 234);
 }
 #localisation__text-area {
@@ -782,7 +782,10 @@ header {
   padding-right: 14px;
 }
 #input-area__input-bar {
+  width: 180px;
   background-color: rgb(234, 234, 234);
+  font-size: 16px;
+  font-weight: 500;
 }
 
 #text-area__main-text {
@@ -815,6 +818,7 @@ header {
   padding-top: 50px;
   padding-bottom: 23px;
   padding-left: 21px;
+  font-weight: bold;
 }
 
 #showcase-smarthpone {
@@ -834,6 +838,7 @@ header {
   height: 90px;
   width: 100%;
   padding-top: 65px;
+  font-weight: bold;
 }
 
 /*--------------------------------------------------[ Media Q 451px]--------------------------------------------------*/
@@ -874,6 +879,7 @@ header {
     padding-top: 50px;
     padding-bottom: 45px;
     padding-left: 50px;
+    font-weight: bold;
   }
   #localisation__text-area {
     background-color: white;
@@ -888,6 +894,7 @@ header {
     border-radius: 24px;
   }
   #localisation__input-area #input-area__input-bar {
+    width: 70%;
     font-weight: 700;
     font-size: x-large;
   }

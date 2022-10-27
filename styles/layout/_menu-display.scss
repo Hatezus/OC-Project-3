@@ -25,7 +25,9 @@
     padding-bottom: 26px;
     padding-left: 21px;
 
-    font-weight: lighter;
+    
+    font-family: "Roboto";
+    font-weight: 700;
 }
 
 #plat__title
@@ -36,7 +38,8 @@
     padding-bottom: 26px;
     padding-left: 21px;
     
-    font-weight: lighter;
+    font-family: 'Roboto';
+    font-weight: 400;
 }
 
 #entree__title
@@ -47,7 +50,8 @@
     padding-bottom: 26px;
     padding-left: 21px;
 
-    font-weight: normal;
+    font-family: 'Roboto';
+    font-weight: 400;
 }
 
 .underline
@@ -79,7 +83,11 @@
 
     & h3
     {
-        width: fit-content;
+        width: 80%;
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
 
         padding-top: 10px;
         padding-left: 10px;
@@ -128,17 +136,11 @@
     &:hover h3
     {
         width: calc(100% - 120px);
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
     }
 
     &:hover .display__infos
     {
         width: calc(100% - 120px);
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
     }
 }
 
@@ -187,38 +189,6 @@
  /*--------------------------------------------------[ Media Q 1024px ]--------------------------------------------------*/
  @media screen and (min-width: 1024px)
  {
-    .rectangle-display--desktop
-    {
-        height: 68px;
-        width: 110%;
-
-        margin: auto;
-        margin-bottom: 14px;
-
-        position: relative;
-
-        border-radius: 18px;
-        box-shadow: 0px 5px 15px $grey;
-
-        & h3
-        {
-            width: 80%;
-
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-
-        & .display__infos
-        {
-            width: 80%;
-
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-    }
-
     .menu
     {
         &__entree--desktop
