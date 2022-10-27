@@ -16,5 +16,10 @@
     color: white;
     background-color: $purple;
     background: linear-gradient(173deg, $pink 5%, $purple 90%);
+
+    &:hover
+    {
+        cursor: pointer;
+    }
 }
 
