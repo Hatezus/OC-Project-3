@@ -31,11 +31,13 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        justify-content: space-around;
+        justify-content: start;
         align-items: center;
 
         position: absolute;
         bottom: 0px;
+
+        padding-left: 10%;
 
         z-index: 3;
         
@@ -47,11 +49,38 @@
         {
             font-size: x-large;
         }
-    }
-    .fa-heart
-    {
-        font-size: x-large;
-    }
+
+        &--heart-empty
+        {
+            position: absolute;
+            right: 10%;
+            bottom: 33%;
+            color: black;
+            font-size: 25px;
+            font-weight: lighter;
+
+        }
+
+        &--heart-full
+        {
+            color: #FFF;
+            position: absolute;
+            right: 10%;
+            bottom: 33%;
+            opacity: 0 ;
+            transition:  opacity 1000ms;
+            font-size: 25px;
+            
+            &:hover
+            {
+                opacity: 1;
+                background: linear-gradient(173deg, $pink 5%, $purple 90%);
+                background-clip: text;
+                color: transparent;
+                cursor: pointer;
+            }
+        }
+    }    
 }
 
 #display__button
